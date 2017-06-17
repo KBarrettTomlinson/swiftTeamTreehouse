@@ -97,10 +97,5 @@ levelScore -= 1 //Unary Minus Operator
 let on = true
 let off = !on //Not Operator
 
-/*
- --------------------------
- Ternary Operators
- --------------------------
- */
 
 
