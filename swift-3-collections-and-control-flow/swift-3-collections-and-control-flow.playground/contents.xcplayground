@@ -4,5 +4,6 @@
         <page name='Arrays'/>
         <page name='Dictionaries'/>
         <page name='Control Flow with Loops'/>
+        <page name='Control Flow with If statements'/>
     </pages>
 </playground>
