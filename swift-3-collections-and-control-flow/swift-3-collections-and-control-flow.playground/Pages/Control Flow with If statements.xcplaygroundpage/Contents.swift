@@ -55,9 +55,11 @@ if (isRaining || isSnowing) && temperature < 2 {
 
 let airportCodes: [String] = ["LGA", "LHR", "CDG", "MSP"]
 
-switch "MSP" {
-case "LGA": print("New York")
-case "LHR": print("London")
-case "MSP": print("Minneapolis")
-default: print("I don't know which city that is in")
+for airportCode in airportCodes{
+    switch airportCode{
+    case "LGA": print("New York")
+    case "LHR": print("London")
+    case "MSP": print("Minneapolis")
+    default: print("I don't know which city that is in")
+    }
 }
