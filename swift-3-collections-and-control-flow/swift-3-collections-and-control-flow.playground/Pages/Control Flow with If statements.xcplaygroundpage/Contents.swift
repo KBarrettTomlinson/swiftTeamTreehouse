@@ -53,13 +53,52 @@ if (isRaining || isSnowing) && temperature < 2 {
 
 // switch keyword case default
 
-let airportCodes: [String] = ["LGA", "LHR", "CDG", "MSP"]
+let airportCodes: [String] = ["LGA", "LHR", "CDG", "MSP", "LGW", "JFK"]
 
 for airportCode in airportCodes{
     switch airportCode{
-    case "LGA": print("New York")
-    case "LHR": print("London")
+    case "LGA", "JFK": print("New York")
+    case "LHR", "LGW": print("London")
     case "MSP": print("Minneapolis")
     default: print("I don't know which city that is in")
     }
 }
+
+import GameKit
+let randomTemperature = GKRandomSource.sharedRandom().nextInt(upperBound: 150)
+
+switch randomTemperature {
+case 0..<32: print("Let's go play")
+case 32..<45: print("couldn't be nicer outside")
+case 45..<70: print("getting warmer, but still nice")
+case 70...100: print("video game day")
+default: print("stay in bed")
+}
+
+
+// switch statements are prefered over if statements
+
+// Fizz Buzz
+let fizzer: Int = 3
+let buzzer: Int = 5
+let index: Int
+for index in 1...100 {
+    var response: String = ""
+    if index % fizzer == 0{
+        response = "Fizz"
+    }
+    if index % buzzer == 0{
+        response += "Buzz"
+    }
+    if response == ""{
+        response = "\(index)"
+    }
+    print(response)
+}
+
+
+
+
+
+
+
