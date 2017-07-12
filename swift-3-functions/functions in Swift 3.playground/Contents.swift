@@ -66,7 +66,7 @@ remove(havingValue: "a")
 
 //using
 
-func carpetCost(havingArea area: Int, carpetColor color: String = "tan") -> Int { //setting up a default value
+func carpetCost(havingArea area: Int, carpetColor color: String = "tan") -> (price: Int, carpetColor: String) { //setting up a default value
     // Grey carpet - 1 per sq ft
     // Tan carpet - 2 per sq ft
     // Deep Blue carpet - 4 per sq ft
@@ -79,7 +79,7 @@ func carpetCost(havingArea area: Int, carpetColor color: String = "tan") -> Int 
     default: price = 0
     }
 
-    return price
+    return (price, color)
 }
 
 print(carpetCost(havingArea: 45, carpetColor: "tan"))
@@ -87,6 +87,34 @@ carpetCost(havingArea: 15, carpetColor: "grey")
 
 carpetCost(havingArea: kitchenArea, carpetColor: "blue")
 carpetCost(havingArea: 45)
+
+let results = carpetCost(havingArea: 450, carpetColor: "blue")
+results.1
+results.0
+results.price
+results.carpetColor
+
+/*
+ ----------
+ Scope
+ ----------
+ */
+
+func arrayModifier(array: [Int]) -> [Int] {
+    var arrayOfInts = array
+    arrayOfInts.append(5)
+    
+    let secondArray = arrayOfInts
+    return secondArray
+}
+
+var arrayOfInts = [1,2,3,4,5,]
+arrayOfInts
+arrayModifier(array: arrayOfInts)
+arrayOfInts
+arrayOfInts = arrayModifier(array: arrayOfInts)
+arrayOfInts
+
 
 
 
