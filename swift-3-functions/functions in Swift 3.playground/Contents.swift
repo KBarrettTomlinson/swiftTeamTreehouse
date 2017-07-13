@@ -115,6 +115,26 @@ arrayOfInts
 arrayOfInts = arrayModifier(array: arrayOfInts)
 arrayOfInts
 
+//secondArray DNE in this scope
+
+
+// using an _ allows us to have an internal variable name without a label for calling the function
+func someFunction(_ test: Int){}
+
+func coordinates(for location: String) -> (lat: Double,lon: Double){
+    
+    switch location {
+    case "Eiffel Tower": return (48.8582, 2.2945)
+    case "Great Pyramid": return (29.9792, 31.1344)
+    case "Sydney Opera House": return (33.8587, 151.2140)
+    default: return (0,0)
+    }
+}
+
+coordinates(for: "Eiffel Tower")
+
+
+
 
 
 
