@@ -22,6 +22,19 @@ struct Point {
         //var results: [Point] = [] this declaration is the same as the next line
         var results = [Point]()
         
+        let lowerBoundOfXRange = x - range
+        let upperBoundOfXRange = x + range
+        
+        let lowerBoundOfYRange = y - range
+        let upperBoundOfYRange = y + range
+        
+        for xCoordinate in lowerBoundOfXRange...upperBoundOfXRange {
+            for yCoordinate in lowerBoundOfYRange...upperBoundOfYRange {
+                let coordinatePoint = Point(x: xCoordinate, y: yCoordinate)
+                results.append(coordinatePoint)
+            }
+        }
+        
         return results
     }
 }
