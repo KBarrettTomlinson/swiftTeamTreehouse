@@ -43,6 +43,9 @@ struct Point {
 
 let p1 = Point(x: 0, y: 0)
 
+p1.x
+
+
 // new structure called User
 
 struct User {
@@ -89,6 +92,33 @@ myBook.title
 
 
 // Doucmentation Comments
+
+// Instance methods
+// Can only be called once we have an instance of the object
+
+// Point.points(inRange: 1) <-- This doesn't work because points is an instance method. 
+
+let coordinatePoint = Point(x: 0, y: 0)
+coordinatePoint.x
+coordinatePoint.points()
+
+struct Person {
+    let firstName: String
+    let lastName: String
+    
+    func fullName() -> String {
+        let fullName = "\(firstName) \(lastName)"
+        return fullName
+    }
+}
+
+let newPerson = Person(firstName: "Keith", lastName: "Tomlinson")
+newPerson.firstName
+
+newPerson.fullName()
+
+
+
 
 
 
