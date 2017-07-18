@@ -111,6 +111,18 @@ let enemy = Enemy(x: 1, y: 1)
 
 tower.fire(at: enemy)
 
+let enemy12 = Enemy(x: 4, y: 5)
+tower.fire(at: enemy12)
+
+/*
+ ----------
+ Class Inheritance
+ ----------
+ */
+
+
+
+
 
 
 
