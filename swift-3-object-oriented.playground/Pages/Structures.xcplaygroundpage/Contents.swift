@@ -13,9 +13,17 @@ var str = "Hello, playground"
 //a structure is a flexible data type 
 
 struct Point {
+    // stored properties
     let x: Int
     let y: Int
     
+    // init method
+    init(x: Int, y: Int){
+        self.x = x
+        self.y = y
+    }
+    
+    // methods
     /// Returns the surrounding points in range of
     /// the current one
     func points(inRange range: Int = 1) -> [Point] {
@@ -116,6 +124,47 @@ let newPerson = Person(firstName: "Keith", lastName: "Tomlinson")
 newPerson.firstName
 
 newPerson.fullName()
+
+/*
+    ----------
+    Initializers and Self
+    ----------
+ */
+
+// adding an initialzier method to the Points object above
+
+// when the init is created for us it is known as a memberwise initializer method
+
+// self is used inside init methods 
+
+// the purpose of the init method is to assign values to all of the stored properties inside of the structure
+
+struct RGBColor {
+    let red: Double
+    let green: Double
+    let blue: Double
+    let alpha: Double
+    
+    let description: String
+
+    // Add your code below
+    
+    init (red: Double, green: Double, blue: Double, alpha: Double){
+        self.red = red
+        self.green = green
+        self.blue = blue
+        self.alpha = alpha
+        self.description = "red: \(red), green: \(green), blue: \(blue), alpha: \(alpha)"
+    }
+}
+
+let newColor = RGBColor(red: 86, green: 191, blue: 131, alpha: 1)
+newColor.description
+
+
+
+
+
 
 
 
