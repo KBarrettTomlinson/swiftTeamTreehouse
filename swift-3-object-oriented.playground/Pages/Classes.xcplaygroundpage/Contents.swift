@@ -69,7 +69,27 @@ class Enemy {
     }
 }
 
+// SuperEnemy inherits from the class Enemy
+class SuperEnemy: Enemy {
+    // if subclass has properties of its own that do not belong to the subclass, we must first provide
+    // initial values for those properties
+    // then we provide inital values for the properties of the base class if they do not have default values
+    let isSuper: Bool = true
+    // subclasses inherit the intializer method of the superclass
+    
+    // overriding properties and methods
+    override init(x: Int, y: Int) {
+        // if we had new properties in the subclass we and didn't have a default value here, then we would 
+        // assign them first
+        // then we address superclass properties without default values
+        super.init(x: x, y: y)
+        self.life = 50
+    }
+    
+}
 // classes v structs
+// classes support inheritance, which is one of the fundamental ways in which it differs from a struct
+
 
 class Tower {
     // stored properties
@@ -119,6 +139,10 @@ tower.fire(at: enemy12)
  Class Inheritance
  ----------
  */
+
+let superEnemy = SuperEnemy(x: 45, y: 23)
+superEnemy.life
+
 
 
 
