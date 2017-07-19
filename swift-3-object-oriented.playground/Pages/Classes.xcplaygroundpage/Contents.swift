@@ -126,6 +126,12 @@ class Tower {
     }
 } //ends Tower Class
 
+// IS A laser tower also a regular tower? then it should inherit
+
+class LaserTower: Tower {
+    
+}
+
 let tower = Tower(x: 0, y: 0)
 let enemy = Enemy(x: 1, y: 1)
 
@@ -142,6 +148,26 @@ tower.fire(at: enemy12)
 
 let superEnemy = SuperEnemy(x: 45, y: 23)
 superEnemy.life
+
+class Vehicle {
+    var numberOfDoors: Int
+    var numberOfWheels: Int
+    
+    init(withDoors doors: Int, andWheels wheels: Int) {
+        self.numberOfDoors = doors
+        self.numberOfWheels = wheels
+    }
+}
+
+class Car: Vehicle {
+    var numberOfSeats: Int = 4
+}
+
+let someCar = Car(withDoors: 3, andWheels: 4)
+
+someCar.numberOfSeats
+someCar.numberOfDoors
+
 
 
 
