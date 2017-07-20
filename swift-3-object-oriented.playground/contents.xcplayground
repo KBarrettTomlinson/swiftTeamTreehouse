@@ -3,5 +3,6 @@
     <pages>
         <page name='Classes'/>
         <page name='Structures'/>
+        <page name='ValueVsReference'/>
     </pages>
 </playground>
