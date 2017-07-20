@@ -130,7 +130,23 @@ class Tower {
 
 class LaserTower: Tower {
     
+    override init(x: Int, y: Int) {
+        super.init(x: x, y: y)
+        self.range = 100
+        self.strength = 100
+    }
+    
+    override func fire(at enemy: Enemy) {
+        while enemy.life >= 0 {
+            enemy.decreaseLife(by: strength)
+        }
+        print("Enemy destroyed!")
+    }
+    
 }
+
+let laserTower = LaserTower(x: 2, y: 2)
+
 
 let tower = Tower(x: 0, y: 0)
 let enemy = Enemy(x: 1, y: 1)
@@ -167,6 +183,9 @@ let someCar = Car(withDoors: 3, andWheels: 4)
 
 someCar.numberOfSeats
 someCar.numberOfDoors
+
+laserTower.fire(at: superEnemy)
+
 
 
 
